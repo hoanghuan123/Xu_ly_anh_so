@@ -11,11 +11,9 @@ imageio.imwrite('red.png', img_r.astype(np.uint8))
 imageio.imwrite('green.png', img_g.astype(np.uint8))
 imageio.imwrite('blue.png', img_b.astype(np.uint8))
 Kết quả:
-
 ![blue](https://github.com/user-attachments/assets/bd7409a9-509f-4bda-9a35-3d17197e98ef)
 ![red](https://github.com/user-attachments/assets/4eba5a9c-f7e3-4897-83c8-83467bb26d7c)
 ![green](https://github.com/user-attachments/assets/f60354e4-d323-4271-ac9c-14df81a899cf)
-
 Câu 2: 
 1: Đọc ảnh gốc :img = imageio.imread('balloons_noisy.png')
 2: Tạo ảnh với kênh màu hoán đổi :
@@ -27,11 +25,9 @@ imageio.imwrite('bgr.jpg', img_bgr)
 imageio.imwrite('grb.jpg', img_grb)
 imageio.imwrite('brg.jpg', img_brg)
 Kết quả
-
 ![brg](https://github.com/user-attachments/assets/cbcdd7b8-bc3f-42ff-85fe-54ac81ba2a2b)
 ![grb](https://github.com/user-attachments/assets/0824a12a-9d58-43d4-afb7-99b34f5c5ad1)
 ![bgr](https://github.com/user-attachments/assets/acfc6be6-ac71-4407-b05c-a9d3ecd5598c)
-
 câu 3:
 Import thư viện OpenCV
 1: Đọc ảnh gốc : img = cv2.imread('bird.png')
@@ -45,7 +41,6 @@ Kết quả:
 h.jpg: hiển thị vùng tông màu.
 s.jpg: hiển thị độ đậm nhạt của màu.
 v.jpg: hiển thị độ sáng.
-
 kết quả:
 ![h](https://github.com/user-attachments/assets/35b5facb-3bfe-4b68-864a-c1f9ed5b05cf)
 ![s](https://github.com/user-attachments/assets/ccd758d0-1c5d-42e5-88d4-e52f2f9853dc)
