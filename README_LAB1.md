@@ -1,8 +1,8 @@
 Câu 1: 
-1: Import thư viện
-2: Đọc ảnh đầu vào  : img = imageio.imread('flower.jpeg')
-3: Tách từng kênh màu : r, g, b = img[:, :, 0], img[:, :, 1], img[:, :, 2]
-4: Tạo ảnh chỉ có một kênh màu : 
+1: Import thư viện  
+2: Đọc ảnh đầu vào  : img = imageio.imread('flower.jpeg')  
+3: Tách từng kênh màu : r, g, b = img[:, :, 0], img[:, :, 1], img[:, :, 2]  
+4: Tạo ảnh chỉ có một kênh màu :   
 img_r = np.stack((r, np.zeros_like(r), np.zeros_like(r)), axis=2)
 img_g = np.stack((np.zeros_like(g), g, np.zeros_like(g)), axis=2)
 img_b = np.stack((np.zeros_like(b), np.zeros_like(b), b), axis=2)
