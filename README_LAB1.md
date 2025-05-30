@@ -59,9 +59,41 @@ hsv[:, :, 2] = np.clip(hsv[:, :, 2], 0, 255)
 hsv = hsv.astype(np.uint8)
 result = cv2.cvtColor(hsv, cv2.COLOR_HSV2BGR)
 cv2.imwrite('hsv.png', result)
+plt.imshow(result)
+plt.axis('off')
+plt.show()
 Kết quả
+
 ![hsv](https://github.com/user-attachments/assets/690d420d-6191-4a23-8f62-5f3f99a165b1)
 
+câu 5: 
+Tạo thư mục lưu kết quả (mean_filter):
+  input_folder = 'exercise'
+  output_folder = 'mean_filter'
+  os.makedirs(output_folder, exist_ok=True)
+Bộ lọc trung bình 5x5:
+  k = np.ones((5, 5)) / 25
+Duyệt qua từng file ảnh trong thư mục
+  for filename in os.listdir(input_folder):
+  if filename.lower().endswith(('.png', '.jpg', '.jpeg', '.bmp')):
+  input_path = os.path.join(input_folder, filename)
+  output_path = os.path.join(output_folder, filename)
+
+Đọc ảnh grayscale
+  a = iio.imread(input_path,mode ='F')
+Áp dụng bộ lọc trung bình
+  b = sn.convolve(a, k).astype(np.uint8)
+Lưu ảnh sau khi lọc
+  iio.imsave(output_path, b)
+Hiển thị ảnh kết quả (tuỳ chọn)
+  plt.imshow(b, cmap='gray')
+  plt.axis('off')
+  plt.show()
+
+
+![baby](https://github.com/user-attachments/assets/0cb27afe-426c-4c02-b5df-35678ea61d8e)
+![flower](https://github.com/user-attachments/assets/5d141385-a6ed-47d3-aa2b-3ba80c00b596)
+![balloons_noisy](https://github.com/user-attachments/assets/2fb8b325-4db3-46e3-95ec-5279f58c1ebd)
 
 
 
