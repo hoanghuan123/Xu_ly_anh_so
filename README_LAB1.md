@@ -14,6 +14,7 @@ Kết quả:
 ![blue](https://github.com/user-attachments/assets/bd7409a9-509f-4bda-9a35-3d17197e98ef)
 ![red](https://github.com/user-attachments/assets/4eba5a9c-f7e3-4897-83c8-83467bb26d7c)
 ![green](https://github.com/user-attachments/assets/f60354e4-d323-4271-ac9c-14df81a899cf)
+
 Câu 2: 
 1: Đọc ảnh gốc :img = imageio.imread('balloons_noisy.png')
 2: Tạo ảnh với kênh màu hoán đổi :
@@ -29,6 +30,7 @@ Kết quả
 ![grb](https://github.com/user-attachments/assets/0824a12a-9d58-43d4-afb7-99b34f5c5ad1)
 ![bgr](https://github.com/user-attachments/assets/acfc6be6-ac71-4407-b05c-a9d3ecd5598c)
 câu 3:
+
 Import thư viện OpenCV
 1: Đọc ảnh gốc : img = cv2.imread('bird.png')
 2: Chuyển sang hệ màu HSV : hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -45,6 +47,7 @@ kết quả:
 ![h](https://github.com/user-attachments/assets/35b5facb-3bfe-4b68-864a-c1f9ed5b05cf)
 ![s](https://github.com/user-attachments/assets/ccd758d0-1c5d-42e5-88d4-e52f2f9853dc)
 ![v](https://github.com/user-attachments/assets/84de7c26-9537-454e-bde2-7d680d7c77f8)
+
 câu 4:
 1: Đọc ảnh và chuyển từ BGR sang HSV:
 img = cv2.imread('balloons_noisy.png')
@@ -63,7 +66,6 @@ plt.imshow(result)
 plt.axis('off')
 plt.show()
 Kết quả
-
 ![hsv](https://github.com/user-attachments/assets/690d420d-6191-4a23-8f62-5f3f99a165b1)
 
 câu 5: 
