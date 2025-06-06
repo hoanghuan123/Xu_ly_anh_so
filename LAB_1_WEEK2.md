@@ -35,7 +35,7 @@ plt.imshow(b, cmap='gray')
 plt.axis('off')
 plt.show()
 
-Bài 7:
+# Bài 7:
 import cv2
 import os
 # Thư mục chứa ảnh gốc
@@ -56,7 +56,7 @@ for fname in os.listdir(input_folder):
     cv2.imwrite(output_path, edges)
 
 
-Bài 8:
+# Bài 8:
 import cv2
 import os
 import numpy as np
@@ -92,7 +92,7 @@ for fname in os.listdir(input_folder):
     output_path = os.path.join(output_folder, f"rgb_{fname}")
     cv2.imwrite(output_path, color_shifted)
 
-Bài 9:
+# Bài 9:
 import cv2
 import os
 import numpy as np
