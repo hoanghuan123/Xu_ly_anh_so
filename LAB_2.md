@@ -1,4 +1,4 @@
-#Câu 1:
+# Câu 1:
 #import thư viện
 import cv2
 import numpy as np
@@ -78,7 +78,7 @@ options = {
 }
 
 
-#câu 2
+# câu 2
 #Biến ảnh xám thành phổ tần số, chủ yếu để trực quan hóa ảnh trong miền tần số.
 def fast_fourier_transform(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # chuyển sang ảnh xám
@@ -212,7 +212,7 @@ def contrast_stretching(img):
             print("Đã lưu:", output_path)
 # Hiển thị ảnh (tùy chọn – anh có thể bật/tắt)
     
-#câu 4
+# câu 4
 import cv2
 import numpy as np
 import os
