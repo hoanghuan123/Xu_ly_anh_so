@@ -1,23 +1,23 @@
-## câu 1:
+ # Câu 1:
 import numpy as np
 import scipy.ndimage as nd
 import imageio.v2 as iio
 import matplotlib.pylab as plt
 
-# Đọc ảnh từ thư mục exercise
+## Đọc ảnh từ thư mục exercise
 data = iio.imread('exercise/colorful-ripe-tropical-fruits.jpg')
 
-# Cắt vùng ảnh từ tọa độ y: 680-855, x: 1390-1580
+## Cắt vùng ảnh từ tọa độ y: 680-855, x: 1390-1580
 bmg = data[680:855, 1390:1580]
 
-# In kích thước ảnh gốc
+## In kích thước ảnh gốc
 print(data.shape)
 
-# Tịnh tiến ảnh đã cắt sang phải 30px (trục x), không dịch theo y (0)
+## Tịnh tiến ảnh đã cắt sang phải 30px (trục x), không dịch theo y (0)
 
 shifted_bmg = nd.shift(bmg, shift=(0, 30, 0))  
 
-# Lưu ảnh đã tịnh tiến
+## Lưu ảnh đã tịnh tiến
 iio.imsave('exercise/kiwi_shifted.jpg', shifted_bmg)
 
 ## Hiển thị ảnh đã tịnh tiến
@@ -31,29 +31,29 @@ import scipy.ndimage as nd
 import imageio.v2 as iio
 import matplotlib.pylab as plt
 
-# Đọc ảnh từ thư mục exercise
+## Đọc ảnh từ thư mục exercise
 data = iio.imread('exercise/colorful-ripe-tropical-fruits.jpg')
 print("Original image shape:", data.shape)
 
-# Cắt vùng chứa quả đu đủ (ví dụ)
+## Cắt vùng chứa quả đu đủ (ví dụ)
 papaya = data[280:862, 130:650]  # điều chỉnh tọa độ theo thực tế
 
-# Cắt vùng chứa quả dưa hấu (ví dụ)
+## Cắt vùng chứa quả dưa hấu (ví dụ)
 watermelon = data[280:1100, 1650:2117]
 
-# Đổi màu: đảo kênh màu RGB → BGR (ví dụ đổi màu nhẹ nhàng)
+## Đổi màu: đảo kênh màu RGB → BGR (ví dụ đổi màu nhẹ nhàng)
 papaya_changed = papaya[:, :, [2, 1, 0]]  # đu đủ
 watermelon_changed = watermelon.copy()
 watermelon_changed[:, :, 1] = 255 - watermelon_changed[:, :, 1]  # đảo kênh G
 
-# Gắn trở lại ảnh gốc
+## Gắn trở lại ảnh gốc
 data[280:862, 130:650] = papaya_changed
 data[280:1100, 1650:2117] = watermelon_changed
 
-# Lưu ảnh sau khi chỉnh màu
+## Lưu ảnh sau khi chỉnh màu
 iio.imsave('exercise/fruits_changed.jpg', data)
 
-# Hiển thị kết quả
+## Hiển thị kết quả
 plt.imshow(data)
 plt.axis('off')
 plt.title("Đã đổi màu đu đủ và dưa hấu")
@@ -65,28 +65,28 @@ import imageio.v2 as iio
 import scipy.ndimage as nd
 import matplotlib.pylab as plt
 
-# Đọc ảnh từ thư mục exercise
+## Đọc ảnh từ thư mục exercise
 data = iio.imread('exercise/quang_ninh.jpg')
 print("Kích thước ảnh gốc:", data.shape)
 
 # ---------------------------
-# Cắt vùng NGỌN NÚI (ví dụ)
+## Cắt vùng NGỌN NÚI (ví dụ)
 mountain = data[26:324, 432:660]  # Điều chỉnh tọa độ tùy ảnh thực tế
-# Xoay 45 độ
+## Xoay 45 độ
 mountain_rotated = nd.rotate(mountain, angle=45, reshape=True)
-# Lưu ảnh đã xoay
+## Lưu ảnh đã xoay
 iio.imwrite('exercise/nui_xoay.jpg', mountain_rotated)
 
 # ---------------------------
-# Cắt vùng CON THUYỀN (ví dụ)
+## Cắt vùng CON THUYỀN (ví dụ)
 boat = data[460:536, 490:671]  # Điều chỉnh tọa độ tùy ảnh thực tế
-# Xoay 45 độ
+## Xoay 45 độ
 boat_rotated = nd.rotate(boat, angle=45, reshape=True)
-# Lưu ảnh đã xoay
+## Lưu ảnh đã xoay
 iio.imwrite('exercise/thuyen_xoay.jpg', boat_rotated)
 
 # ---------------------------
-# Hiển thị kết quả
+## Hiển thị kết quả
 plt.subplot(1, 2, 1)
 plt.imshow(mountain_rotated.astype(np.uint8))
 plt.axis("off")
