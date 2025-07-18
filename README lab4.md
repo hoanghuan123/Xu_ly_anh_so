@@ -1,5 +1,5 @@
  1. Đọc ảnh và tiền xử lý
-
+ 
 ```python
 from PIL import Image
 import numpy as np
